@@ -11,13 +11,11 @@
 
 <?php 
     require '_connec.php';
-    
+
     $pdo = new \PDO(DSN, USER, PASS);
 
-    if(!empty($_POST)){
-      $errors=[];
-    } else {
-
+    if($_POST){
+    
         $lastname = trim($_POST['lastname']); // get the data from a form
         $firstname = trim($_POST['firstname']); // get the data from a form
         
@@ -35,7 +33,8 @@
         
         header('Location: ');
         
-      }
+      
+    } 
     
     
 
